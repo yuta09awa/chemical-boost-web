@@ -1,11 +1,12 @@
-
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import { Link } from "react-router-dom";
 
 const markets = [
   "Composite Monomers",
@@ -40,9 +41,10 @@ const applications = [
 export const Navbar = () => {
   return (
     <div className="w-full bg-white border-b border-gray-200">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <div className="text-xl font-bold text-primary py-4">ChemGlobal</div>
         <NavigationMenu>
-          <NavigationMenuList>
+          <NavigationMenuList className="space-x-2">
             <NavigationMenuItem>
               <NavigationMenuTrigger>Markets</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -95,6 +97,24 @@ export const Navbar = () => {
                   ))}
                 </ul>
               </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <a
+                href="#about"
+                className="px-4 py-2 block text-sm hover:text-accent-foreground transition-colors"
+              >
+                About Us
+              </a>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <a
+                href="#contact"
+                className="px-4 py-2 block text-sm hover:text-accent-foreground transition-colors"
+              >
+                Contact
+              </a>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
