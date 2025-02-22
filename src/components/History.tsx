@@ -1,6 +1,4 @@
 
-import { Link } from "react-router-dom";
-
 export const History = () => {
   return (
     <section className="relative min-h-[60vh] overflow-hidden group">
@@ -12,11 +10,16 @@ export const History = () => {
       />
       <div className="relative z-20 container mx-auto px-4 h-full flex items-center">
         <div className="max-w-3xl">
-          <Link to="/brand/history" className="block">
+          <a
+            href="https://mikisangyo.co.jp/en/brand/history/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 hover:text-accent transition-colors">
               350 years of history of Miki Sangyo
             </h2>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
