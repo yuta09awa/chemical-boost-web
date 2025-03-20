@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Globe, MapPin, Phone, Linkedin, Twitter, Youtube } from "lucide-react";
-import { markets, chemicals, rikiPads } from "@/components/Navbar";
+import { markets, chemicalCategories, rikiPads, marketCategories } from "@/components/Navbar";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,33 +57,49 @@ export const Footer = () => {
             </div>
           </div>
           
-          {/* Products */}
+          {/* Markets */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Markets</h3>
             <ul className="space-y-3">
-              {markets.slice(0, 5).map((market) => (
-                <li key={market}>
-                  <a href="#" className="text-gray-600 hover:text-primary">{market}</a>
+              {Object.entries(marketCategories).slice(0, 3).map(([category, items]) => (
+                <li key={category}>
+                  <h4 className="text-gray-800 font-medium mb-2">{category}</h4>
+                  <ul className="space-y-2 ml-2">
+                    {items.slice(0, 2).map(market => (
+                      <li key={market}>
+                        <a href="#" className="text-gray-600 hover:text-primary text-sm">{market}</a>
+                      </li>
+                    ))}
+                  </ul>
                 </li>
               ))}
               <li><a href="#" className="text-gray-600 hover:text-primary">All Markets</a></li>
             </ul>
           </div>
           
-          {/* Company */}
+          {/* Chemicals */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Chemicals</h3>
             <ul className="space-y-3">
-              {chemicals.slice(0, 5).map((chemical) => (
-                <li key={chemical}>
-                  <a href="#" className="text-gray-600 hover:text-primary">{chemical}</a>
-                </li>
+              {Object.entries(chemicalCategories).map(([category, items], index) => (
+                index < 2 && (
+                  <li key={category}>
+                    <h4 className="text-gray-800 font-medium mb-2">{category}</h4>
+                    <ul className="space-y-2 ml-2">
+                      {items.slice(0, 2).map(chemical => (
+                        <li key={chemical}>
+                          <a href="#" className="text-gray-600 hover:text-primary text-sm">{chemical}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                )
               ))}
               <li><a href="#" className="text-gray-600 hover:text-primary">All Chemicals</a></li>
             </ul>
           </div>
           
-          {/* Support */}
+          {/* Riki Pads */}
           <div>
             <h3 className="text-lg font-semibold mb-6">Riki Pads</h3>
             <ul className="space-y-3">

@@ -21,34 +21,57 @@ export const markets = [
   "Devices and Machines",
 ];
 
-export const chemicals = [
-  // Epoxy Resins & Bismaleimides
-  "Epoxy Resin",
-  "Polyimide",
-  "Bismaleimide (BMI)",
-  "4,4′-Diphenylmethane bismaleimide",
-  "Phenylmethane maleimide",
-  "m-Phenylene bismaleimide",
-  "2,2-Bis[4-(4-maleimidophenoxy)phenyl]propane",
-  "3,3′-Dimethyl-5,5′-diethyl-4,4′-diphenylmethane bismaleimide",
-  "4-Methyl-1,3-phenylene bismaleimide",
-  "1,6′-Bismaleimide-(2,2,4-trimethyl)hexane",
-  
-  // Hardeners
-  "Bismaleimide Hardener",
-  "DABPA",
-  "Cationic Hardener",
-  
-  // Monomers
-  "6FDA",
-  "s-BPDA",
-  "a-BPDA",
-  "3,4′-ODA",
-  "ODPA",
-  "BAPP",
-  "MPDA",
-  "PPDA",
-];
+// Organize chemicals into meaningful categories
+export const chemicalCategories = {
+  "Epoxy & Bismaleimide Resins": [
+    "Epoxy Resin",
+    "Polyimide",
+    "Bismaleimide (BMI)",
+    "4,4′-Diphenylmethane bismaleimide",
+    "Phenylmethane maleimide",
+    "m-Phenylene bismaleimide",
+    "2,2-Bis[4-(4-maleimidophenoxy)phenyl]propane",
+    "3,3′-Dimethyl-5,5′-diethyl-4,4′-diphenylmethane bismaleimide",
+    "4-Methyl-1,3-phenylene bismaleimide",
+    "1,6′-Bismaleimide-(2,2,4-trimethyl)hexane",
+  ],
+  "Hardeners": [
+    "Bismaleimide Hardener",
+    "DABPA",
+    "Cationic Hardener",
+  ],
+  "Monomers & Diamines": [
+    "6FDA",
+    "s-BPDA",
+    "a-BPDA",
+    "3,4′-ODA",
+    "ODPA",
+    "BAPP",
+    "MPDA",
+    "PPDA",
+  ],
+};
+
+// Flatten the chemicals for easy access in other components
+export const chemicals = Object.values(chemicalCategories).flat();
+
+export const marketCategories = {
+  "Industrial Materials": [
+    "Automotive",
+    "Electronics",
+    "Battery Materials",
+  ],
+  "Specialty Products": [
+    "Optical Materials",
+    "Filter Media",
+    "Special Paper Materials",
+  ],
+  "Chemical Applications": [
+    "Pharmaceuticals",
+    "Paint and Coatings",
+    "Devices and Machines",
+  ],
+};
 
 export const rikiPads = [
   "Masking Tape for Lens Polishing (Rikipad)",
@@ -67,36 +90,50 @@ export const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Markets</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 p-4">
-                  {markets.map((item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        {item}
-                      </a>
-                    </li>
+                <div className="grid w-[600px] grid-cols-3 gap-3 p-4">
+                  {Object.entries(marketCategories).map(([category, items]) => (
+                    <div key={category} className="col-span-1">
+                      <h3 className="text-sm font-medium mb-2 text-primary">{category}</h3>
+                      <ul className="space-y-1">
+                        {items.map((item) => (
+                          <li key={item}>
+                            <a
+                              href="#"
+                              className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {item}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>Chemicals</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 p-4">
-                  {chemicals.map((item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        {item}
-                      </a>
-                    </li>
+                <div className="grid w-[600px] grid-cols-3 gap-3 p-4">
+                  {Object.entries(chemicalCategories).map(([category, items]) => (
+                    <div key={category} className="col-span-1">
+                      <h3 className="text-sm font-medium mb-2 text-primary">{category}</h3>
+                      <ul className="space-y-1 max-h-60 overflow-y-auto">
+                        {items.map((item) => (
+                          <li key={item}>
+                            <a
+                              href="#"
+                              className="block select-none rounded-md p-2 text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {item}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
