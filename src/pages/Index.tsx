@@ -1,6 +1,7 @@
 
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { History } from "@/components/History";
 import { MarketCategories } from "@/components/MarketCategories";
@@ -19,6 +20,7 @@ const Index = () => {
       <History />
       <Stats />
       <Contact />
+      <Footer />
     </div>
   );
 };

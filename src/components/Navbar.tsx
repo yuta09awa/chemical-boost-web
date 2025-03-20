@@ -1,3 +1,4 @@
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,7 +9,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
-const markets = [
+export const markets = [
   "Composite Monomers",
   "Functional Resins",
   "Adhesives and Sealants",
@@ -18,7 +19,7 @@ const markets = [
   "Fine Chemicals",
 ];
 
-const chemicals = [
+export const chemicals = [
   "Monomers",
   "HDI Polyisocyanates",
   "Polymers",
@@ -32,7 +33,7 @@ const chemicals = [
   "Solvents",
 ];
 
-const applications = [
+export const applications = [
   "Anti-hydrolysis",
   "Aerospace",
   "Optical Lenses",
