@@ -1,5 +1,5 @@
 
-import { Building, Globe, Package, Truck } from "lucide-react";
+import { Building, Globe, Package, ShieldCheck } from "lucide-react";
 import { Button } from "./ui/button";
 
 export const Hero = () => {
@@ -15,25 +15,25 @@ export const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Global Chemical Distribution Excellence
+            Miki Sangyo Co., Ltd.
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Your trusted partner in chemical distribution, delivering quality products and reliable solutions worldwide.
+            A leading global distributor of specialty chemicals and materials since 1961, providing innovative solutions for various industries with locations in Japan, USA, China, and India.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-accent hover:bg-accent/90">
-              Explore Products
+            <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+              <a href="#services">Browse Products</a>
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-              Contact Us
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10" asChild>
+              <a href="#contact">Contact Our Team</a>
             </Button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
             {[
               { icon: Globe, text: "Global Reach" },
-              { icon: Truck, text: "Fast Delivery" },
               { icon: Package, text: "Quality Products" },
-              { icon: Building, text: "Industry Expert" },
+              { icon: ShieldCheck, text: "Safety First" },
+              { icon: Building, text: "Industry Expertise" },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center text-white">
                 <item.icon className="w-8 h-8 mb-2" />
