@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Globe, MapPin, Phone, Linkedin, Twitter, Youtube } from "lucide-react";
-import { markets, chemicals, applications } from "@/components/Navbar";
+import { markets, chemicals, rikiPads } from "@/components/Navbar";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -59,36 +59,39 @@ export const Footer = () => {
           
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Products</h3>
+            <h3 className="text-lg font-semibold mb-6">Markets</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-600 hover:text-primary">Organic Chemicals</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Inorganic Chemicals</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Acids & Bases</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Solvents</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">All Products</a></li>
+              {markets.slice(0, 5).map((market) => (
+                <li key={market}>
+                  <a href="#" className="text-gray-600 hover:text-primary">{market}</a>
+                </li>
+              ))}
+              <li><a href="#" className="text-gray-600 hover:text-primary">All Markets</a></li>
             </ul>
           </div>
           
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Company</h3>
+            <h3 className="text-lg font-semibold mb-6">Chemicals</h3>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-600 hover:text-primary">About Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Corporate Profile</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">History</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Sustainability</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">CSR</a></li>
+              {chemicals.slice(0, 5).map((chemical) => (
+                <li key={chemical}>
+                  <a href="#" className="text-gray-600 hover:text-primary">{chemical}</a>
+                </li>
+              ))}
+              <li><a href="#" className="text-gray-600 hover:text-primary">All Chemicals</a></li>
             </ul>
           </div>
           
           {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Support</h3>
+            <h3 className="text-lg font-semibold mb-6">Riki Pads</h3>
             <ul className="space-y-3">
-              <li><a href="#contact" className="text-gray-600 hover:text-primary">Contact Us</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Request a Quote</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">Technical Support</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary">FAQ</a></li>
+              {rikiPads.map((pad) => (
+                <li key={pad}>
+                  <a href="#" className="text-gray-600 hover:text-primary">{pad}</a>
+                </li>
+              ))}
             </ul>
             
             <div className="mt-8">

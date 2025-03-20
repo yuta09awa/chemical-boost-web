@@ -10,33 +10,51 @@ import {
 import { Link } from "react-router-dom";
 
 export const markets = [
-  "Composite Monomers",
-  "Functional Resins",
-  "Adhesives and Sealants",
-  "Paper",
-  "Optical",
-  "Pharma",
-  "Fine Chemicals",
+  "Automotive",
+  "Electronics",
+  "Pharmaceuticals",
+  "Battery Materials",
+  "Optical Materials",
+  "Filter Media",
+  "Special Paper Materials",
+  "Paint and Coatings",
+  "Devices and Machines",
 ];
 
 export const chemicals = [
-  "Monomers",
-  "HDI Polyisocyanates",
-  "Polymers",
-  "Activated Carbon",
-  "Personal Care",
-  "MicroSpheres",
-  "Pigments",
-  "Specialty",
-  "Polyethylene Oxide",
-  "Polycarbonatediols, Polyaspartics",
-  "Solvents",
+  // Epoxy Resins & Bismaleimides
+  "Epoxy Resin",
+  "Polyimide",
+  "Bismaleimide (BMI)",
+  "4,4′-Diphenylmethane bismaleimide",
+  "Phenylmethane maleimide",
+  "m-Phenylene bismaleimide",
+  "2,2-Bis[4-(4-maleimidophenoxy)phenyl]propane",
+  "3,3′-Dimethyl-5,5′-diethyl-4,4′-diphenylmethane bismaleimide",
+  "4-Methyl-1,3-phenylene bismaleimide",
+  "1,6′-Bismaleimide-(2,2,4-trimethyl)hexane",
+  
+  // Hardeners
+  "Bismaleimide Hardener",
+  "DABPA",
+  "Cationic Hardener",
+  
+  // Monomers
+  "6FDA",
+  "s-BPDA",
+  "a-BPDA",
+  "3,4′-ODA",
+  "ODPA",
+  "BAPP",
+  "MPDA",
+  "PPDA",
 ];
 
-export const applications = [
-  "Anti-hydrolysis",
-  "Aerospace",
-  "Optical Lenses",
+export const rikiPads = [
+  "Masking Tape for Lens Polishing (Rikipad)",
+  "Anti Slip Sheet (Rikipad)",
+  "Coating Materials & Coating Liquid",
+  "Evaporation Materials",
 ];
 
 export const Navbar = () => {
@@ -83,10 +101,10 @@ export const Navbar = () => {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Applications</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Riki Pads</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-2 p-4">
-                  {applications.map((item) => (
+                  {rikiPads.map((item) => (
                     <li key={item}>
                       <a
                         href="#"
