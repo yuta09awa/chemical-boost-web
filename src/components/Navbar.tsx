@@ -73,9 +73,9 @@ export const marketCategories = {
   ],
 };
 
-export const rikiPads = [
-  "Masking Tape for Lens Polishing (Rikipad)",
-  "Anti Slip Sheet (Rikipad)",
+export const opticalProducts = [
+  "Masking Tape for Lens Polishing",
+  "Anti Slip Sheet",
   "Coating Materials & Coating Liquid",
   "Evaporation Materials",
 ];
@@ -138,10 +138,10 @@ export const Navbar = () => {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Riki Pads</NavigationMenuTrigger>
+              <NavigationMenuTrigger>Optical Products</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-2 p-4">
-                  {rikiPads.map((item) => (
+                  {opticalProducts.map((item) => (
                     <li key={item}>
                       <a
                         href="#"

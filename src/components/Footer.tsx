@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Globe, MapPin, Phone, Linkedin, Twitter, Youtube } from "lucide-react";
-import { markets, chemicalCategories, rikiPads, marketCategories } from "@/components/Navbar";
+import { markets, chemicalCategories, opticalProducts, marketCategories } from "@/components/Navbar";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -111,14 +111,14 @@ export const Footer = () => {
             </ul>
           </div>
           
-          {/* Riki Pads */}
+          {/* Optical Products */}
           <div>
-            <h3 className="text-base font-semibold mb-4">Riki Pads</h3>
+            <h3 className="text-base font-semibold mb-4">Optical Products</h3>
             <ul className="space-y-2">
-              {rikiPads.map((pad) => (
-                <li key={pad}>
+              {opticalProducts.map((product) => (
+                <li key={product}>
                   <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200">
-                    {pad}
+                    {product}
                   </a>
                 </li>
               ))}
