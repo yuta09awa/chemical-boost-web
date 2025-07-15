@@ -24,11 +24,11 @@ export const Footer = () => {
               <h4 className="font-semibold text-sm">USA Headquarters</h4>
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 text-muted-foreground mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">100 Corporate Drive, Suite 100, New York, NY 10001</span>
+                <span className="text-sm text-muted-foreground">400 Interpace Pkwy, Parsippany, NJ 07054</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-muted-foreground mr-2 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+1 (212) 555-1234</span>
+                <span className="text-sm text-muted-foreground">(973) 263-4111</span>
               </div>
             </div>
             
