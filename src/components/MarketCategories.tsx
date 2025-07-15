@@ -26,32 +26,32 @@ const marketCategories = [
 
 export const MarketCategories = () => {
   return (
-    <section className="py-20">
+    <section className="py-24 section-primary">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-3xl font-bold mb-4">Market Categories</h2>
-          <p className="text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Market Categories</h2>
+          <p className="text-lg text-muted-foreground">
             Explore our comprehensive range of chemical solutions across various industries
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {marketCategories.map((category, index) => (
-            <Card
+            <div
               key={index}
-              className="group cursor-pointer overflow-hidden"
+              className="card-enhanced group cursor-pointer overflow-hidden"
             >
               <div className="aspect-square relative overflow-hidden">
                 <img
                   src={category.image}
                   alt={category.title}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-white text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col items-center justify-center p-6 text-white text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <h3 className="text-xl font-semibold mb-2">{category.title}</h3>
-                  <p className="text-sm">{category.description}</p>
+                  <p className="text-sm leading-relaxed">{category.description}</p>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

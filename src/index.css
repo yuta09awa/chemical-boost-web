@@ -19,10 +19,10 @@
     --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 95%;
+    --secondary: 210 15% 98%;
     --secondary-foreground: 210 30% 20%;
 
-    --muted: 210 15% 95%;
+    --muted: 210 15% 96%;
     --muted-foreground: 210 20% 40%;
 
     --accent: 210 15% 93%;
@@ -36,6 +36,16 @@
     --ring: 210 100% 50%;
 
     --radius: 0.5rem;
+
+    /* Enhanced design tokens */
+    --section-bg: 210 15% 98%;
+    --section-alt-bg: 210 20% 96%;
+    --card-hover: 210 20% 99%;
+    --text-subtle: 210 20% 50%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%));
+    --shadow-elegant: 0 4px 6px -1px hsl(210 20% 16% / 0.1), 0 2px 4px -1px hsl(210 20% 16% / 0.06);
+    --shadow-card: 0 1px 3px 0 hsl(210 20% 16% / 0.1), 0 1px 2px 0 hsl(210 20% 16% / 0.06);
+    --shadow-card-hover: 0 10px 15px -3px hsl(210 20% 16% / 0.1), 0 4px 6px -2px hsl(210 20% 16% / 0.05);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -76,6 +86,16 @@
     --input: 210 25% 25%;
     --ring: 210 100% 50%;
 
+    /* Enhanced design tokens for dark mode */
+    --section-bg: 210 20% 14%;
+    --section-alt-bg: 210 20% 16%;
+    --card-hover: 210 20% 18%;
+    --text-subtle: 210 20% 70%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(210 100% 60%));
+    --shadow-elegant: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-card-hover: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -95,14 +115,44 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight font-medium;
+    line-height: 1.2;
   }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-xl md:text-2xl; }
 
   .container {
     @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+  }
+
+  /* Enhanced section styling */
+  .section-primary {
+    @apply bg-background;
+  }
+
+  .section-secondary {
+    background-color: hsl(var(--section-bg));
+  }
+
+  .section-alt {
+    background-color: hsl(var(--section-alt-bg));
+  }
+
+  /* Enhanced card styling */
+  .card-enhanced {
+    @apply bg-card border border-border/40 rounded-lg transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-enhanced:hover {
+    @apply bg-card-hover transform -translate-y-1;
+    box-shadow: var(--shadow-card-hover);
   }
 }
 
