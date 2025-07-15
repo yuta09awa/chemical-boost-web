@@ -7,9 +7,9 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-white border-t border-gray-200 pt-12 pb-6">
+    <footer className="bg-white border-t border-gray-200 pt-8 pb-4">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Company Info */}
           <div className="col-span-1">
             <div className="flex items-center mb-4">
@@ -20,7 +20,7 @@ export const Footer = () => {
               A leading global distributor of specialty chemicals and materials since 1961, providing innovative solutions for various industries with locations in Japan, USA, China, and India.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h4 className="font-semibold">USA Headquarters</h4>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-gray-500 mr-2 mt-0.5" />
@@ -32,7 +32,7 @@ export const Footer = () => {
               </div>
             </div>
             
-            <div className="mt-6 space-y-4">
+            <div className="mt-4 space-y-2">
               <h4 className="font-semibold">Japan Headquarters</h4>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-gray-500 mr-2 mt-0.5" />
@@ -59,8 +59,8 @@ export const Footer = () => {
           
           {/* Markets */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Markets</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Markets</h3>
+            <ul className="space-y-2">
               {Object.entries(marketCategories).slice(0, 3).map(([category, items]) => (
                 <li key={category}>
                   <h4 className="text-gray-800 font-medium mb-2">{category}</h4>
@@ -79,8 +79,8 @@ export const Footer = () => {
           
           {/* Chemicals */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Chemicals</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Chemicals</h3>
+            <ul className="space-y-2">
               {Object.entries(chemicalCategories).map(([category, items], index) => (
                 index < 2 && (
                   <li key={category}>
@@ -101,8 +101,8 @@ export const Footer = () => {
           
           {/* Riki Pads */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Riki Pads</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4">Riki Pads</h3>
+            <ul className="space-y-2">
               {rikiPads.map((pad) => (
                 <li key={pad}>
                   <a href="#" className="text-gray-600 hover:text-primary">{pad}</a>
@@ -123,7 +123,7 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
+        <div className="mt-8 pt-4 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">© {currentYear} Miki Sangyo Co., Ltd. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 hover:text-gray-700 text-sm">Privacy Policy</a>

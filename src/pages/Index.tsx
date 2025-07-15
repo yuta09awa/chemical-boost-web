@@ -9,6 +9,8 @@ import { MarketCategories } from "@/components/MarketCategories";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
+import { FAQ } from "@/components/FAQ";
+import { Testimonials } from "@/components/Testimonials";
 
 const Index = () => {
   return (
@@ -21,6 +23,8 @@ const Index = () => {
       <About />
       <History />
       <Stats />
+      <Testimonials />
+      <FAQ />
       <Contact />
       <Footer />
     </div>

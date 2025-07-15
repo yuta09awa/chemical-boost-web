@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { getAllProducts } from "@/data/chemicals";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -56,6 +57,7 @@ const ProductList = () => {
       </Helmet>
 
       <Navbar />
+      <Breadcrumbs items={[{ label: "Products", path: "/products" }]} />
 
       <div className="bg-gray-50 py-12 border-b">
         <div className="container mx-auto px-4">

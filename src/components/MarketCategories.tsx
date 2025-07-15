@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 const marketCategories = [
   {
     title: "Industrial Chemicals",
-    image: "https://images.unsplash.com/photo-1616668894565-7db36b152b69?auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1486718448742-163732cd1544?auto=format&fit=crop&q=80",
     description: "Solutions for manufacturing and industrial processes",
   },
   {
@@ -19,7 +19,7 @@ const marketCategories = [
   },
   {
     title: "Research & Development",
-    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&q=80",
     description: "Materials for research and development",
   },
 ];
