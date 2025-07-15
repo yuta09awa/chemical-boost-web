@@ -70,8 +70,8 @@ export const History = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black group"
+              variant="outline-white"
+              className="group"
               asChild
             >
               <a 
