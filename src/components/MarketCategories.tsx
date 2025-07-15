@@ -4,7 +4,7 @@ import { Card } from "./ui/card";
 const marketCategories = [
   {
     title: "Industrial Chemicals",
-    image: "https://images.unsplash.com/photo-1581092918484-8313bef2c0e1?auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80",
     description: "Solutions for manufacturing and industrial processes",
   },
   {
