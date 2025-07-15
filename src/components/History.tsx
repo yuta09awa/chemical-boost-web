@@ -68,6 +68,22 @@ export const History = () => {
                 <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </a>
             </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-black group"
+              asChild
+            >
+              <a 
+                href="https://mikisangyo.co.jp/en/brand/history/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                aria-label="Learn about Miki Sangyo's company history"
+              >
+                See Our History
+                <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>
