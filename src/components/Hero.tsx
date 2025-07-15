@@ -14,11 +14,14 @@ export const Hero = () => {
       />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl animate-fade-up">
+          <div className="mb-4">
+            <span className="text-lg md:text-xl text-blue-200 font-medium tracking-wide">A Forest of Value</span>
+          </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Miki Sangyo Co., Ltd.
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl">
-            A leading global distributor of specialty chemicals and materials since 1961, providing innovative solutions for various industries with locations in Japan, USA, China, and India.
+            Beyond 350 years of heritage, connecting global manufacturers and customers through our expertise in specialty chemicals and materials across Japan, USA, China, India, and Europe.
           </p>
           <div className="flex flex-wrap gap-4 mb-16">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-3" asChild>
@@ -30,10 +33,10 @@ export const Hero = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Globe, text: "Global Reach" },
-              { icon: Package, text: "Quality Products" },
-              { icon: ShieldCheck, text: "Safety First" },
-              { icon: Building, text: "Industry Expertise" },
+              { icon: Building, text: "Professionalism" },
+              { icon: Globe, text: "Flexibility" },
+              { icon: ShieldCheck, text: "Creativity" },
+              { icon: Package, text: "350+ Years Heritage" },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center text-white group">
                 <div className="bg-white/10 p-3 rounded-full mb-3 group-hover:bg-white/20 transition-colors duration-300">

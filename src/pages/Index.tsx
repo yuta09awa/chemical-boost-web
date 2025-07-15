@@ -10,6 +10,7 @@ import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
 import { FAQ } from "@/components/FAQ";
+import { Sustainability } from "@/components/Sustainability";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <FeaturedProducts />
       <Services />
       <About />
+      <Sustainability />
       <History />
       <Stats />
       <FAQ />
