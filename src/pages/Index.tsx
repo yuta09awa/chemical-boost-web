@@ -11,6 +11,7 @@ import { Services } from "@/components/Services";
 import { Stats } from "@/components/Stats";
 import { FAQ } from "@/components/FAQ";
 import { Sustainability } from "@/components/Sustainability";
+import GlobalNetwork from "@/components/GlobalNetwork";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Services />
       <About />
       <Sustainability />
+      <GlobalNetwork />
       <History />
       <Stats />
       <FAQ />
