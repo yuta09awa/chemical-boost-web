@@ -74,19 +74,17 @@ export const marketCategories = {
 };
 
 export const opticalProducts = [
-  "Masking Tape for Lens Polishing (Rikipad)",
-  "Anti Slip Sheet (Rikipad)", 
+  "Masking Tape for Lens Polishing",
+  "Anti Slip Sheet",
   "Coating Materials & Coating Liquid",
   "Evaporation Materials",
-  "Surface Protection Tapes",
-  "Fixing Pads for Lens Cutting",
 ];
 
 export const Navbar = () => {
   return (
     <div className="w-full bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="text-xl font-bold text-primary py-4">MIKI SANGYO (USA)</div>
+        <div className="text-xl font-bold text-primary py-4">ChemGlobal</div>
         <NavigationMenu>
           <NavigationMenuList className="space-x-2">
             <NavigationMenuItem>

@@ -6,23 +6,23 @@ export const About = () => {
   const features = [
     {
       icon: Building2,
-      title: "Quality Excellence",
-      description: "Delivering superior optical products with precision manufacturing and rigorous quality control standards.",
+      title: "Professionalism",
+      description: "Establishing trust through our accumulated knowledge and expertise built over more than 350 years.",
     },
     {
       icon: Globe2,
-      title: "Customer Focus",
-      description: "Tailored solutions for lens manufacturers with responsive support and technical expertise.",
+      title: "Flexibility",
+      description: "Responding to diverse customer needs with our global network and adaptable business approach.",
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Advancing optical technology through cutting-edge materials and coating solutions.",
+      title: "Creativity",
+      description: "Creating new value through innovative thinking and challenging conventional business models.",
     },
     {
       icon: ShieldCheck,
-      title: "USA Manufacturing",
-      description: "Local production and distribution ensuring fast delivery and superior service to US customers.",
+      title: "Sustainable Future",
+      description: "Contributing to environmental and social sustainability for future generations.",
     },
   ];
 
@@ -30,15 +30,15 @@ export const About = () => {
     <section className="py-24 section-primary" id="about">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-20 animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">MIKI SANGYO (USA) INC. - Precision Optical Solutions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Beyond 350 - Our Management Philosophy</h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            As the USA subsidiary of Miki Sangyo Co., Ltd., we specialize in precision optical products for lens 
-            manufacturing and coating processes. Building on our parent company's 350+ years of heritage, we provide 
-            innovative solutions for the American optical industry.
+            Founded in Enpo 2 (1674), Miki Sangyo has built trust through more than 350 years of business excellence. 
+            Our management philosophy centers on "discipline and order," ensuring steady growth while adapting to 
+            changing times and customer needs.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We supply high-quality surface protection tapes, fixing pads, coating materials, and evaporation materials 
-            to optical manufacturers across the United States, ensuring precision and reliability in every product.
+            We connect global manufacturers and customers through our expertise, creating value that contributes 
+            to a sustainable future society. Our three core strengths guide every aspect of our business.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

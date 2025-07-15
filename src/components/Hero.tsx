@@ -18,10 +18,10 @@ export const Hero = () => {
             <span className="text-lg md:text-xl text-blue-200 font-medium tracking-wide">A Forest of Value</span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            MIKI SANGYO (USA) INC.
+            Miki Sangyo Co., Ltd.
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl">
-            Specialized optical products for lens manufacturing and coating processes. Leading supplier of surface protection tapes, fixing pads, and evaporation materials in the USA market.
+            Beyond 350 years of heritage, connecting global manufacturers and customers through our expertise in specialty chemicals and materials across Japan, USA, China, India, and Europe.
           </p>
           <div className="flex flex-wrap gap-4 mb-16">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-3" asChild>
