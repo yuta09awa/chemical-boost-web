@@ -151,7 +151,8 @@
   }
 
   .card-enhanced:hover {
-    @apply bg-card-hover transform -translate-y-1;
+    @apply transform -translate-y-1;
+    background-color: hsl(var(--card-hover));
     box-shadow: var(--shadow-card-hover);
   }
 }
