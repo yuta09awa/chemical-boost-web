@@ -18,49 +18,65 @@ const GlobalNetwork = () => {
       city: 'Tokyo',
       country: 'Japan',
       coordinates: [139.6917, 35.6895],
-      type: 'headquarters'
+      type: 'headquarters',
+      address: '3-15-5 Nihonbashi, Chuo-ku, Tokyo (2nd Miki Building)',
+      phone: '03-3271-4186',
+      established: 'Head Office'
     },
     {
       name: 'MIKI SANGYO (USA) INC.',
-      city: 'New York',
-      country: 'USA',
-      coordinates: [-74.0060, 40.7128],
-      type: 'subsidiary'
+      city: 'Parsippany',
+      country: 'New Jersey, USA',
+      coordinates: [-74.4288, 40.8576],
+      type: 'subsidiary',
+      address: '400 INTERPACE PARKWAY, PARSIPPANY, NEW JERSEY 07054, U.S.A.',
+      phone: '(1) 973-263-4111',
+      fax: '(1) 973-263-1325',
+      established: 'February 1973'
     },
     {
-      name: 'MIKI (SHANGHAI) CO., LTD.',
-      city: 'Shanghai',
-      country: 'China',
-      coordinates: [121.4737, 31.2304],
-      type: 'subsidiary'
+      name: 'MIKI (EUROPE) GmbH',
+      city: 'Düsseldorf',
+      country: 'Germany',
+      coordinates: [6.7735, 51.2277],
+      type: 'subsidiary',
+      address: 'IMMERMANNSTR. 35, 40210 DÜSSELDORF, F.R. GERMANY',
+      phone: '(49) 211-3230618',
+      fax: '(49) 211-1332860',
+      established: 'October 1980'
     },
     {
       name: 'MIKI (THAILAND) LTD.',
       city: 'Bangkok',
       country: 'Thailand',
       coordinates: [100.5018, 13.7563],
-      type: 'subsidiary'
+      type: 'subsidiary',
+      address: '121/72, RS TOWER, 23rd FLOOR, RATCHADAPISEK ROAD, KWANG DINDAENG, KHET DINDAENG, BANGKOK 10400, THAILAND',
+      phone: '(66) 2-6412213',
+      fax: '(66) 2-6412217',
+      established: 'February 1988'
+    },
+    {
+      name: 'MIKI (SHANGHAI) CO., LTD.',
+      city: 'Shanghai',
+      country: 'China',
+      coordinates: [121.4737, 31.2304],
+      type: 'subsidiary',
+      address: 'ROOM 1408, BUILDING A FAR EAST INTERNATIONAL PLAZA, No.319 XIANXIA ROAD, CHANGNING DISTRICT, SHANGHAI 200051, CHINA',
+      phone: '(86) 21-6235-0070',
+      fax: '(86) 21-6235-0119',
+      established: 'March 2003'
     },
     {
       name: 'PT. MIKI INDONESIA',
       city: 'Jakarta',
       country: 'Indonesia',
       coordinates: [106.8456, -6.2088],
-      type: 'subsidiary'
-    },
-    {
-      name: 'MIKI (EUROPE) GmbH',
-      city: 'Frankfurt',
-      country: 'Germany',
-      coordinates: [8.6821, 50.1109],
-      type: 'subsidiary'
-    },
-    {
-      name: 'MIKI SANGYO (INDIA) PVT. LTD.',
-      city: 'Mumbai',
-      country: 'India',
-      coordinates: [72.8777, 19.0760],
-      type: 'subsidiary'
+      type: 'subsidiary',
+      address: 'PALMA TOWER, LEVEL 17 UNIT D, JL. RA KARTINI II-S KAV. 6, JAKARTA SELATAN 12310, INDONESIA',
+      phone: '(62) 21-75930446',
+      fax: '(62) 21-75930447',
+      established: 'March 2013'
     }
   ];
 
@@ -75,7 +91,7 @@ const GlobalNetwork = () => {
         style: 'mapbox://styles/mapbox/light-v11',
         projection: 'mercator',
         zoom: 2,
-        center: [-74.0060, 40.7128], // Centered on Miki USA (New York)
+        center: [-74.4288, 40.8576], // Centered on Miki USA (Parsippany, NJ)
         pitch: 0,
       });
 
@@ -117,9 +133,13 @@ const GlobalNetwork = () => {
             offset: 25,
             closeButton: false,
           }).setHTML(`
-            <div class="p-3">
-              <h3 class="font-semibold text-primary mb-1">${location.name}</h3>
-              <p class="text-sm text-muted-foreground">${location.city}, ${location.country}</p>
+            <div class="p-4 max-w-sm">
+              <h3 class="font-semibold text-primary mb-2">${location.name}</h3>
+              <p class="text-sm text-muted-foreground mb-2">${location.city}, ${location.country}</p>
+              ${location.address ? `<p class="text-xs text-muted-foreground mb-2">${location.address}</p>` : ''}
+              ${location.phone ? `<p class="text-xs"><strong>Phone:</strong> ${location.phone}</p>` : ''}
+              ${location.fax ? `<p class="text-xs"><strong>Fax:</strong> ${location.fax}</p>` : ''}
+              ${location.established ? `<p class="text-xs mt-1"><strong>Established:</strong> ${location.established}</p>` : ''}
               <span class="inline-block mt-2 px-2 py-1 text-xs rounded-full ${
                 location.type === 'headquarters' 
                   ? 'bg-red-100 text-red-700' 
@@ -199,7 +219,7 @@ const GlobalNetwork = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Global Network</h2>
           </div>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Our company has local subsidiaries in seven locations in the United States, Germany, Thailand, China, Indonesia, and India, 
+            Our company has local subsidiaries in five locations in the United States, Germany, Thailand, China, and Indonesia, 
             and continues to make rapid progress on the global stage.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -255,13 +275,27 @@ const GlobalNetwork = () => {
             {locations.map((location, index) => (
               <div key={index} className="card-enhanced p-4 hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start gap-3">
-                  <div className={`w-4 h-4 rounded-full mt-1 ${
+                  <div className={`w-4 h-4 rounded-full mt-1 flex-shrink-0 ${
                     location.type === 'headquarters' ? 'bg-red-500' : 'bg-orange-500'
                   }`} />
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <h4 className="font-semibold text-sm mb-1">{location.name}</h4>
-                    <p className="text-sm text-muted-foreground">{location.city}, {location.country}</p>
-                    <span className={`inline-block mt-2 px-2 py-1 text-xs rounded-full ${
+                    <p className="text-sm text-muted-foreground mb-2">{location.city}, {location.country}</p>
+                    {location.address && (
+                      <p className="text-xs text-muted-foreground mb-2 leading-relaxed">{location.address}</p>
+                    )}
+                    <div className="space-y-1 mb-2">
+                      {location.phone && (
+                        <p className="text-xs"><span className="font-medium">Phone:</span> {location.phone}</p>
+                      )}
+                      {location.fax && (
+                        <p className="text-xs"><span className="font-medium">Fax:</span> {location.fax}</p>
+                      )}
+                      {location.established && (
+                        <p className="text-xs"><span className="font-medium">Established:</span> {location.established}</p>
+                      )}
+                    </div>
+                    <span className={`inline-block px-2 py-1 text-xs rounded-full ${
                       location.type === 'headquarters' 
                         ? 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-400' 
                         : 'bg-orange-100 text-orange-700 dark:bg-orange-900/20 dark:text-orange-400'
