@@ -61,6 +61,13 @@ const GoogleGlobalNetwork = () => {
       country: 'Germany',
       coordinates: { lat: 50.1109, lng: 8.6821 },
       type: 'subsidiary'
+    },
+    {
+      name: 'MIKI SANGYO (INDIA) PVT. LTD.',
+      city: 'Mumbai',
+      country: 'India',
+      coordinates: { lat: 19.0760, lng: 72.8777 },
+      type: 'subsidiary'
     }
   ];
 
@@ -182,7 +189,7 @@ const GoogleGlobalNetwork = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Global Network</h2>
           </div>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Our company has local subsidiaries in five locations in the United States, Germany, Thailand, China, and Indonesia, 
+            Our company has local subsidiaries in six locations in the United States, Germany, Thailand, China, Indonesia, and India, 
             and continues to make rapid progress on the global stage.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">

@@ -11,25 +11,22 @@ export const History = () => {
     script.innerHTML = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Miki Sangyo Co., Ltd.",
-      "url": "https://mikisangyo.co.jp/en/",
-      "logo": "https://mikisangyo.co.jp/en/wp-content/themes/mikitheme/assets/images/logo.png",
-      "description": "A leading global distributor of specialty chemicals and materials since 1961.",
-      "foundingDate": "1961",
-      "founder": {
-        "@type": "Person",
-        "name": "Miki Sangyo Co., Ltd."
-      },
+      "name": "Miki Sangyo USA Inc.",
+      "url": "https://www.mikisangyo.com/",
+      "logo": "https://www.mikisangyo.com/en/wp-content/themes/mikitheme/assets/images/logo.png",
+      "description": "A leading global distributor of specialty chemicals and materials since 1674.",
+      "foundingDate": "1674",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3-4-5 Nihonbashi-Honcho, Chuo-ku",
-        "addressLocality": "Tokyo",
-        "postalCode": "103-0023",
-        "addressCountry": "Japan"
+        "streetAddress": "400 Interpace Parkway",
+        "addressLocality": "Parsippany",
+        "addressRegion": "NJ",
+        "postalCode": "07054",
+        "addressCountry": "USA"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+81 3-3279-1751",
+        "telephone": "+1-973-263-4111",
         "contactType": "customer service"
       }
     });
@@ -55,7 +52,7 @@ export const History = () => {
             Global Expertise in Chemical Supply
           </h2>
           <p className="text-lg text-gray-200 mb-8 max-w-2xl">
-            With offices in Japan, USA, China, and India, Miki Sangyo provides consistent quality and service worldwide since 1961, connecting suppliers and customers through our global network.
+            With offices in Japan, USA, China, Germany, Thailand, and India, Miki Sangyo provides consistent quality and service worldwide since 1674, connecting suppliers and customers through our global network.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button 
@@ -75,7 +72,7 @@ export const History = () => {
               asChild
             >
               <a 
-                href="https://mikisangyo.co.jp/en/brand/history/" 
+                href="https://www.mikisangyo.com/about.html" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Learn about Miki Sangyo's company history"

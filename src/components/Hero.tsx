@@ -21,7 +21,7 @@ export const Hero = () => {
             Miki Sangyo USA Inc.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed max-w-3xl">
-            Beyond 350 years of heritage, connecting global manufacturers and customers through our expertise in specialty chemicals and materials across Japan, USA, China, India, and Europe.
+            With a heritage of over 350 years, connecting global manufacturers and customers through our expertise in specialty chemicals and materials across Japan, USA, China, India, Germany, and Thailand.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-base sm:text-lg px-6 sm:px-8 py-3 w-full sm:w-auto" asChild>

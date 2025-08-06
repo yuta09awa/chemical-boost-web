@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
-import { Globe, MapPin, Phone, Linkedin, Twitter, Youtube } from "lucide-react";
-import { markets, chemicalCategories, opticalProducts, marketCategories } from "@/components/Navbar";
+import { Globe, MapPin, Phone } from "lucide-react";
+import { marketCategories, chemicalCategories, opticalProducts } from "@/components/Navbar";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,10 +14,10 @@ export const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center mb-4">
               <div className="bg-primary text-white font-bold p-2 rounded mr-3">MS</div>
-              <h3 className="text-lg font-semibold">Miki Sangyo Co., Ltd.</h3>
+              <h3 className="text-lg font-semibold">Miki Sangyo USA Inc.</h3>
             </div>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              A leading global distributor of specialty chemicals and materials since 1961, providing innovative solutions for various industries with locations in Japan, USA, China, and India.
+              A leading global distributor of specialty chemicals and materials since 1674, providing innovative solutions for various industries.
             </p>
             
             <div className="space-y-3 mb-6">
@@ -44,17 +44,6 @@ export const Footer = () => {
               </div>
             </div>
             
-            <div className="flex space-x-3">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
-                <Youtube className="w-4 h-4" />
-              </a>
-            </div>
           </div>
           
           {/* Markets */}
@@ -138,7 +127,7 @@ export const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© {currentYear} Miki Sangyo Co., Ltd. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">© {currentYear} Miki Sangyo USA Inc. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors duration-200">
               Privacy Policy
