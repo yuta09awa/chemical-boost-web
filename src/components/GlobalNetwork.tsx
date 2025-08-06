@@ -226,8 +226,7 @@ const GlobalNetwork = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Global Network</h2>
           </div>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Our company has local subsidiaries in five locations in the United States, Germany, Thailand, China, and Indonesia, 
-            and continues to make rapid progress on the global stage.
+            With offices in Japan, USA, Germany, Thailand, China, and Indonesia, our global network ensures we can provide consistent quality and service worldwide.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             With our extensive international network, we provide seamless chemical supply services across continents, 
