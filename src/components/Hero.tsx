@@ -18,7 +18,7 @@ export const Hero = () => {
             <span className="text-base sm:text-lg md:text-xl text-blue-200 font-medium tracking-wide">A Forest of Value</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Miki Sangyo Co., Ltd.
+            Miki Sangyo USA Inc.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed max-w-3xl">
             Beyond 350 years of heritage, connecting global manufacturers and customers through our expertise in specialty chemicals and materials across Japan, USA, China, India, and Europe.

@@ -85,7 +85,7 @@ export const Navbar = () => {
   return (
     <div className="w-full bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="text-xl font-bold text-primary py-4">ChemGlobal</div>
+        <div className="text-xl font-bold text-primary py-4">Miki Sangyo USA Inc.</div>
         
         {/* Mobile Navigation */}
         <MobileNav />
