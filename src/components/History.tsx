@@ -42,7 +42,7 @@ export const History = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60 z-10" />
       <img
         src="https://mikisangyo.co.jp/en/wp-content/themes/mikitheme/assets/images/history-back.jpg"
-        alt="Miki Sangyo Global Chemical Distribution"
+        alt="Miki Sangyo Global Chemical Supply"
         className="absolute inset-0 w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
       />
       <div className="relative z-20 container mx-auto px-4 h-full flex items-center py-16">

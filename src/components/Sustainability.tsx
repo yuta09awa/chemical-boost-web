@@ -6,7 +6,7 @@ export const Sustainability = () => {
     {
       icon: Leaf,
       title: "Environmental Responsibility",
-      description: "Committed to reducing environmental impact through sustainable chemical distribution practices and eco-friendly solutions.",
+      description: "Committed to reducing environmental impact through sustainable chemical supply practices and eco-friendly solutions.",
     },
     {
       icon: Recycle,

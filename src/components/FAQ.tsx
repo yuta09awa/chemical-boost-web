@@ -3,8 +3,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqData = [
   {
-    question: "What types of chemicals do you distribute?",
-    answer: "We distribute a wide range of specialty chemicals including industrial chemicals, pharmaceuticals, epoxy resins, hardeners, monomers, and various specialty compounds for multiple industries."
+    question: "What types of chemicals do you supply?",
+    answer: "We supply a wide range of specialty chemicals including industrial chemicals, pharmaceuticals, epoxy resins, hardeners, monomers, and various specialty compounds for multiple industries."
   },
   {
     question: "Do you provide technical support for your products?",
@@ -41,7 +41,7 @@ export const FAQ = () => {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="text-gray-600">
-            Find answers to common questions about our chemical distribution services
+            Find answers to common questions about our chemical supply services
           </p>
         </div>
         

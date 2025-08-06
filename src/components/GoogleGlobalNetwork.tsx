@@ -193,7 +193,7 @@ const GoogleGlobalNetwork = () => {
             and continues to make rapid progress on the global stage.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            With our extensive international network, we provide seamless chemical distribution services across continents, 
+            With our extensive international network, we provide seamless chemical supply services across continents, 
             ensuring local expertise with global standards.
           </p>
         </div>
