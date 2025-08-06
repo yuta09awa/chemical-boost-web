@@ -8,6 +8,7 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
+import { MobileNav } from "./MobileNav";
 
 export const markets = [
   "Automotive",
@@ -85,12 +86,17 @@ export const Navbar = () => {
     <div className="w-full bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="text-xl font-bold text-primary py-4">ChemGlobal</div>
-        <NavigationMenu>
+        
+        {/* Mobile Navigation */}
+        <MobileNav />
+        
+        {/* Desktop Navigation */}
+        <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="space-x-2">
             <NavigationMenuItem>
               <NavigationMenuTrigger>Markets</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[600px] grid-cols-3 gap-3 p-4">
+                <div className="grid w-[400px] lg:w-[600px] grid-cols-2 lg:grid-cols-3 gap-3 p-4">
                   {Object.entries(marketCategories).map(([category, items]) => (
                     <div key={category} className="col-span-1">
                       <h3 className="text-sm font-medium mb-2 text-primary">{category}</h3>
@@ -115,7 +121,7 @@ export const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Chemicals</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <div className="grid w-[600px] grid-cols-3 gap-3 p-4">
+                <div className="grid w-[400px] lg:w-[600px] grid-cols-2 lg:grid-cols-3 gap-3 p-4">
                   {Object.entries(chemicalCategories).map(([category, items]) => (
                     <div key={category} className="col-span-1">
                       <h3 className="text-sm font-medium mb-2 text-primary">{category}</h3>
@@ -140,7 +146,7 @@ export const Navbar = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Optical Products</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 p-4">
+                <ul className="grid w-[300px] lg:w-[400px] gap-2 p-4">
                   {opticalProducts.map((item) => (
                     <li key={item}>
                       <a
