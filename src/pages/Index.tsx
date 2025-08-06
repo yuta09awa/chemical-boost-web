@@ -12,7 +12,6 @@ import { Stats } from "@/components/Stats";
 import { FAQ } from "@/components/FAQ";
 import { Sustainability } from "@/components/Sustainability";
 import GlobalNetwork from "@/components/GlobalNetwork";
-import GoogleGlobalNetwork from "@/components/GoogleGlobalNetwork";
 
 const Index = () => {
   return (
@@ -24,7 +23,7 @@ const Index = () => {
       <Services />
       <About />
       <Sustainability />
-      <GoogleGlobalNetwork />
+      <GlobalNetwork />
       <History />
       <Stats />
       <FAQ />
