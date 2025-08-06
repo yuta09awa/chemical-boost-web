@@ -64,7 +64,7 @@ export const Contact = () => {
                   Company Information
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Miki Sangyo Co., Ltd. - A leading global distributor of specialty chemicals and materials 
+                  Miki Sangyo Co., Ltd. - A leading global supplier of specialty chemicals and materials 
                   since 1961, providing innovative solutions for various industries with locations in 
                   Japan, USA, China, and India.
                 </p>

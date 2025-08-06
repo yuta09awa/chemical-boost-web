@@ -17,7 +17,7 @@ export const Footer = () => {
               <h3 className="text-lg font-semibold">Miki Sangyo USA Inc.</h3>
             </div>
             <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-              A leading global distributor of specialty chemicals and materials since 1674, providing innovative solutions for various industries.
+              A leading global supplier of specialty chemicals and materials since 1674, providing innovative solutions for various industries.
             </p>
             
             <div className="space-y-3 mb-6">

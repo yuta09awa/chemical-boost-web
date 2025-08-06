@@ -14,7 +14,7 @@ export const History = () => {
       "name": "Miki Sangyo USA Inc.",
       "url": "https://www.mikisangyo.com/",
       "logo": "https://www.mikisangyo.com/en/wp-content/themes/mikitheme/assets/images/logo.png",
-      "description": "A leading global distributor of specialty chemicals and materials since 1674.",
+      "description": "A leading global supplier of specialty chemicals and materials since 1674.",
       "foundingDate": "1674",
       "address": {
         "@type": "PostalAddress",
