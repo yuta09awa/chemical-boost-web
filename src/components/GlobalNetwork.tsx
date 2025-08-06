@@ -8,8 +8,15 @@ import { MapPin, Globe } from 'lucide-react';
 const GlobalNetwork = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [apiKey, setApiKey] = useState('');
-  const [showInput, setShowInput] = useState(true);
+  const [apiKey, setApiKey] = useState('pk.eyJ1IjoieXV0b2dhIiwiYSI6ImNtZTAydHVrOTAwaHoyc284ODMxZjduMnAifQ.I9VgIvI7ykVdXW5BgYMiCg');
+  const [showInput, setShowInput] = useState(false);
+
+  // Initialize map automatically when component mounts
+  useEffect(() => {
+    if (apiKey && !map.current) {
+      initializeMap(apiKey);
+    }
+  }, []);
 
   // Miki Sangyo global locations
   const locations = [
